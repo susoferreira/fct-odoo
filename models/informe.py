@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class informe(models.Model):
     _name = "informes.informe"
     _description = "Informe"
-    name = fields.Char()
+
     fecha = fields.Date()
 
     epR = fields.Float()
@@ -29,4 +29,9 @@ class informe(models.Model):
     EcT = fields.Float()
     EcRST = fields.Float()
     Einv_tot = fields.Float()
-    Einv_INVERSOR_1 = fields.Float()
+    
+    Einv_INVERSOR_1 = fields.Float(required=False)
+    Einv_INVERSOR_2 = fields.Float(required=False)
+    Einv_INVERSOR_3 = fields.Float(required=False)
+    Einv_INVERSOR_4 = fields.Float(required=False)
+    Einv_INVERSOR_5 = fields.Float(required=False)

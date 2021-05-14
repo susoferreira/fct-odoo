@@ -1,0 +1,48 @@
+<odoo>
+    <template id="report_datos">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h>Report title</h>
+                            <p>Fecha: <span t-field="doc.fecha"/></p>
+                            <p>epR <span t-field="doc.epR"/></p>
+                            <p>emR <span t-field="doc.emR"/></p>
+                            <p>epS <span t-field="doc.epS"/></p>
+                            <p>emS <span t-field="doc.emS"/></p>
+                            <p>epT <span t-field="doc.epT"/></p>
+                            <p>emT <span t-field="doc.emT"/></p>
+                            <p>epRST <span t-field="doc.epRST"/></p>
+                            <p>emRST <span t-field="doc.emRST"/></p>
+                            <p>Q1 <span t-field="doc.Q1"/></p>
+                            <p>Q2 <span t-field="doc.Q2"/></p>
+                            <p>Q3 <span t-field="doc.Q3"/></p>
+                            <p>Q4 <span t-field="doc.Q4"/></p>
+                            <p>EcR <span t-field="doc.EcR"/></p>
+                            <p>EcS <span t-field="doc.EcS"/></p>
+                            <p>EcT <span t-field="doc.EcT"/></p>
+                            <p>ecRST <span t-field="doc.EcRST"/></p>
+                            <p>Einv_tot <span t-field="doc.Einv_tot"/></p>
+
+
+
+                            <p>Einv_INVERSOR_1 <span t-field="doc.Einv_INVERSOR_1"/></p>
+                            <p>Einv_INVERSOR_2 <span t-field="doc.Einv_INVERSOR_2"/></p>
+                            <p>Einv_INVERSOR_3 <span t-field="doc.Einv_INVERSOR_3"/></p>
+                            <p>Einv_INVERSOR_4 <span t-field="doc.Einv_INVERSOR_4"/></p>
+                            <p>Einv_INVERSOR_5 <span t-field="doc.Einv_INVERSOR_5"/></p>
+    
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report id="report_informes"
+        model="informes.informe" 
+        string="Informe de los datos" 
+        report_type="qweb-pdf" 
+        name="informes.report_datos" 
+        file="informes.report_datos"/>
+
+</odoo>
