@@ -22,7 +22,11 @@
                     <field name ="EcT"/>
                     <field name ="EcRST"/>
                     <field name ="Einv_tot"/>
-                    <field name ="Einv_INVERSOR_1"/>
+                    <field name ="inversor_1"/>
+                    <field name ="inversor_2"/>
+                    <field name ="inversor_3"/>
+                    <field name ="inversor_4"/>
+                    <field name ="inversor_5"/>
                 </tree>
             </field>
         </record>

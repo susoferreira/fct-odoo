@@ -1,48 +1,94 @@
 <odoo>
     <template id="report_datos">
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="doc">
-                <t t-call="web.external_layout">
-                    <div class="page">
-                        <h>Report title</h>
-                            <p>Fecha: <span t-field="doc.fecha"/></p>
-                            <p>epR <span t-field="doc.epR"/></p>
-                            <p>emR <span t-field="doc.emR"/></p>
-                            <p>epS <span t-field="doc.epS"/></p>
-                            <p>emS <span t-field="doc.emS"/></p>
-                            <p>epT <span t-field="doc.epT"/></p>
-                            <p>emT <span t-field="doc.emT"/></p>
-                            <p>epRST <span t-field="doc.epRST"/></p>
-                            <p>emRST <span t-field="doc.emRST"/></p>
-                            <p>Q1 <span t-field="doc.Q1"/></p>
-                            <p>Q2 <span t-field="doc.Q2"/></p>
-                            <p>Q3 <span t-field="doc.Q3"/></p>
-                            <p>Q4 <span t-field="doc.Q4"/></p>
-                            <p>EcR <span t-field="doc.EcR"/></p>
-                            <p>EcS <span t-field="doc.EcS"/></p>
-                            <p>EcT <span t-field="doc.EcT"/></p>
-                            <p>ecRST <span t-field="doc.EcRST"/></p>
-                            <p>Einv_tot <span t-field="doc.Einv_tot"/></p>
+            <t t-call="web.external_layout">
+                <!-- TODO, hacer que use el css correctamente-->
 
+                <div class="page">
+                    <h1 style="text-align: center;">Report title</h1>
+                    <style>
+                        .flat-table {
+                            display: block;
+                            font-family: sans-serif;
+                            -webkit-font-smoothing: antialiased;
+                            font-size: 115%;
+                            overflow: auto;
+                            width: auto;
+                        }
 
+                        .flat-table>th {
+                            background-color: rgb(112, 196, 105);
+                            color: white;
+                            font-weight: normal;
+                            padding: 20px 30px;
+                            text-align: center;
+                        }
 
-                            <p>Einv_INVERSOR_1 <span t-field="doc.Einv_INVERSOR_1"/></p>
-                            <p>Einv_INVERSOR_2 <span t-field="doc.Einv_INVERSOR_2"/></p>
-                            <p>Einv_INVERSOR_3 <span t-field="doc.Einv_INVERSOR_3"/></p>
-                            <p>Einv_INVERSOR_4 <span t-field="doc.Einv_INVERSOR_4"/></p>
-                            <p>Einv_INVERSOR_5 <span t-field="doc.Einv_INVERSOR_5"/></p>
-    
-                    </div>
-                </t>
+                        .flat-table>td {
+                            background-color: rgb(238, 238, 238);
+                            color: rgb(111, 111, 111);
+                            padding: 20px 30px;
+                        }
+                    </style>
+                    <table border="1" class="flat-table">
+                        <th>epR</th>
+                        <th>emR</th>
+                        <th>epS</th>
+                        <th>emS</th>
+                        <th>epT</th>
+                        <th>emT</th>
+                        <th>epRST</th>
+                        <th>emRST</th>
+                        <th>Q1</th>
+                        <th>Q2</th>
+                        <th>Q3</th>
+                        <th>Q4</th>
+                        <th>EcR</th>
+                        <th>EcS</th>
+                        <th>EcT</th>
+                        <th>EcRST</th>
+                        <th>Einv_tot</th>
+
+                        <th>inversor_1 </th>
+                        <th>inversor_2 </th>
+                        <th>inversor_3 </th>
+                        <th>inversor_4 </th>
+                        <th>inversor_5 </th>
+                        <t t-foreach="docs" t-as="doc">
+                            <!-- por cada documento se crea una fila nueva y se añaden los datos-->
+                            <tr>
+                                <td> <span t-field="doc.fecha" /></td>
+                                <td> <span t-field="doc.epR" /></td>
+                                <td> <span t-field="doc.emR" /></td>
+                                <td> <span t-field="doc.epS" /></td>
+                                <td> <span t-field="doc.emS" /></td>
+                                <td> <span t-field="doc.epT" /></td>
+                                <td> <span t-field="doc.emT" /></td>
+                                <td> <span t-field="doc.epRST" /></td>
+                                <td> <span t-field="doc.emRST" /></td>
+                                <td> <span t-field="doc.Q1" /></td>
+                                <td> <span t-field="doc.Q2" /></td>
+                                <td> <span t-field="doc.Q3" /></td>
+                                <td> <span t-field="doc.Q4" /></td>
+                                <td> <span t-field="doc.EcR" /></td>
+                                <td> <span t-field="doc.EcS" /></td>
+                                <td> <span t-field="doc.EcT" /></td>
+                                <td> <span t-field="doc.EcRST" /></td>
+                                <td> <span t-field="doc.Einv_tot" /></td>
+                                <td> <span t-field="doc.inversor_1" /></td>
+                                <td> <span t-field="doc.inversor_2" /></td>
+                                <td> <span t-field="doc.inversor_3" /></td>
+                                <td> <span t-field="doc.inversor_4" /></td>
+                                <td> <span t-field="doc.inversor_5" /></td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
             </t>
         </t>
     </template>
 
-    <report id="report_informes"
-        model="informes.informe" 
-        string="Informe de los datos" 
-        report_type="qweb-pdf" 
-        name="informes.report_datos" 
-        file="informes.report_datos"/>
+    <report id="report_informes" model="informes.informe" string="Informe de los datos" report_type="qweb-html"
+        name="informes.report_datos" file="informes.report_datos" />
 
 </odoo>

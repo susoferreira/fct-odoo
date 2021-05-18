@@ -30,8 +30,8 @@ class informe(models.Model):
     EcRST = fields.Float()
     Einv_tot = fields.Float()
     
-    Einv_INVERSOR_1 = fields.Float(required=False)
-    Einv_INVERSOR_2 = fields.Float(required=False)
-    Einv_INVERSOR_3 = fields.Float(required=False)
-    Einv_INVERSOR_4 = fields.Float(required=False)
-    Einv_INVERSOR_5 = fields.Float(required=False)
+    inversor_1 = fields.Float(required=False)
+    inversor_2 = fields.Float(required=False)
+    inversor_3 = fields.Float(required=False)
+    inversor_4 = fields.Float(required=False)
+    inversor_5 = fields.Float(required=False)
