@@ -7,30 +7,35 @@
                 <div class="page">
                     <h1 style="text-align: center;">Report title</h1>
                     <style>
-                        .flat-table {
-                            display: block;
+                       
+                       .flat-table {
+                            margin:0 auto;
                             font-family: sans-serif;
                             -webkit-font-smoothing: antialiased;
-                            font-size: 115%;
+                            font-size:60%;
                             overflow: auto;
                             width: auto;
                         }
-
-                        .flat-table>th {
+ 
+                        th {
                             background-color: rgb(112, 196, 105);
                             color: white;
                             font-weight: normal;
-                            padding: 20px 30px;
+                            padding: 10px 20px;
                             text-align: center;
                         }
 
-                        .flat-table>td {
+                        td {
                             background-color: rgb(238, 238, 238);
                             color: rgb(111, 111, 111);
-                            padding: 20px 30px;
+                            padding: 5px 5px;
                         }
+                    
+                    
+                    
                     </style>
-                    <table border="1" class="flat-table">
+                    <table class="flat-table">
+                        <th>Fecha</th>
                         <th>epR</th>
                         <th>emR</th>
                         <th>epS</th>
@@ -88,7 +93,14 @@
         </t>
     </template>
 
-    <report id="report_informes" model="informes.informe" string="Informe de los datos" report_type="qweb-html"
-        name="informes.report_datos" file="informes.report_datos" />
+
+
+    <report id="report_informes"
+        model="informes.informe"
+        string="Informe de los datos"
+        report_type="qweb-html"
+        name="informes.report_datos"
+        file="informes.report_datos"
+        paperformat="report_paperformat_a4_horizontal" />
 
 </odoo>
