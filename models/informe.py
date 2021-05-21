@@ -8,7 +8,7 @@ class informe(models.Model):
     _description = "Informe"
 
     fecha = fields.Date()
-
+    instalacion = fields.Char() # nombre de la instalación
     epR = fields.Float()
     emR = fields.Float()
     epS = fields.Float()
