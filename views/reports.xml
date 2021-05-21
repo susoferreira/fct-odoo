@@ -16,7 +16,7 @@
                             overflow: auto;
                             width: auto;
                         }
- 
+
                         th {
                             background-color: rgb(112, 196, 105);
                             color: white;
@@ -95,12 +95,20 @@
 
 
 
-    <report id="report_informes"
+    <report id="report_informes_html"
         model="informes.informe"
-        string="Informe de los datos"
+        string="Informe de los datos-web"
         report_type="qweb-html"
         name="informes.report_datos"
         file="informes.report_datos"
         paperformat="report_paperformat_a4_horizontal" />
+
+    <report id="report_informes_pdf"
+    model="informes.informe"
+    string="Informe de los datos-pdf"
+    report_type="qweb-pdf"
+    name="informes.report_datos"
+    file="informes.report_datos"
+    paperformat="report_paperformat_a4_horizontal" />
 
 </odoo>
