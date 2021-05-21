@@ -3,7 +3,7 @@
         <record model="ir.rule" id="informes_record_rule">
             <field name="name">informes propios </field>
             <field name="model_id" ref="informes.model_informes_informe"/>
-            <field name="domain_force">['|',('propietario','=',user.id)]</field>
+            <field name="domain_force">[('propietario','=',user.id)]</field>
             <field name="groups" eval="[(4,ref('base.group_user'))]"/>
         </record>
     </data>
