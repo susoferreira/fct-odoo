@@ -1,2 +1,2 @@
-id,name,page_height,page_width,header_spacing,margin_right,margin_bottom,margin_left,margin_top,header_line,orientation,dpi,format,default
-report_paperformat_a4_horizontal,A4 Horizontal,0,0,35,7.0,28.0,7.0,40.0,,Horizontal,90,"A4 0 210 x 297 mm, 8,26 x 11,69 pulgadas",False
+"id","name","page_height","page_width","header_spacing","id","report_ids","margin_right","margin_bottom","margin_left","margin_top","header_line","orientation","dpi","format","default"
+"report_paperformat_a4_horizontal","A4 Horizontal","0","0","35","report_paperformat_a4_horizontal","","7.0","28.0","7.0","40.0","","Horizontal","90","A4 0 210 x 297 mm, 8,26 x 11,69 pulgadas",""
