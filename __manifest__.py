@@ -30,7 +30,7 @@
         'views/views.xml',
         'views/menus.xml',
         'views/reports.xml',
-        'views/templates.xml',
+        'security/rules.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

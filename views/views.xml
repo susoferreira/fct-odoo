@@ -4,7 +4,8 @@
             <field name="name">informe.tree</field>
             <field name="model">informes.informe</field>
             <field name="arch" type="xml">
-                <tree string="suceso Tree" editable ="top">
+                <tree string="informes tree view" editable ="top">
+                    <field name ="propietario"/>
                     <field name ="fecha"/>
                     <field name ="epR"/>
                     <field name ="emR"/>

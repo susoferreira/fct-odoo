@@ -104,11 +104,11 @@
         paperformat="report_paperformat_a4_horizontal" />
 
     <report id="report_informes_pdf"
-    model="informes.informe"
-    string="Informe de los datos-pdf"
-    report_type="qweb-pdf"
-    name="informes.report_datos"
-    file="informes.report_datos"
-    paperformat="report_paperformat_a4_horizontal" />
+        model="informes.informe"
+        string="Informe de los datos-pdf"
+        report_type="qweb-pdf"
+        name="informes.report_datos"
+        file="informes.report_datos"
+        paperformat="report_paperformat_a4_horizontal" />
 
 </odoo>

@@ -35,3 +35,5 @@ class informe(models.Model):
     inversor_3 = fields.Float(required=False)
     inversor_4 = fields.Float(required=False)
     inversor_5 = fields.Float(required=False)
+    propietario = fields.Many2one('res.users','Propietario', default=lambda self: self.env.uid) 
+    # el propietario es el usuario que crea los datos
