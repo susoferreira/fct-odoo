@@ -6,6 +6,7 @@
             <field name="arch" type="xml">
                 <tree string="informes tree view" editable ="top">
                     <field name ="propietario"/>
+                    <field name ="Instalación"/>
                     <field name ="fecha"/>
                     <field name ="epR"/>
                     <field name ="emR"/>
