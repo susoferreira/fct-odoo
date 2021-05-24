@@ -36,6 +36,8 @@
                     </style>
                     <table class="flat-table">
                         <th>Fecha</th>
+                        <th>Planta</th>
+                        <th>Propietario</th>
                         <th>epR</th>
                         <th>emR</th>
                         <th>epS</th>
@@ -56,13 +58,13 @@
 
                         <th>inversor_1 </th>
                         <th>inversor_2 </th>
-                        <th>inversor_3 </th>
-                        <th>inversor_4 </th>
-                        <th>inversor_5 </th>
+
                         <t t-foreach="docs" t-as="doc">
                             <!-- por cada documento se crea una fila nueva y se añaden los datos-->
                             <tr>
                                 <td> <span t-field="doc.fecha" /></td>
+                                <td> <span t-field="doc.planta" /></td>
+                                <td> <span t-field="doc.propietario" /></td>
                                 <td> <span t-field="doc.epR" /></td>
                                 <td> <span t-field="doc.emR" /></td>
                                 <td> <span t-field="doc.epS" /></td>
@@ -82,9 +84,7 @@
                                 <td> <span t-field="doc.Einv_tot" /></td>
                                 <td> <span t-field="doc.inversor_1" /></td>
                                 <td> <span t-field="doc.inversor_2" /></td>
-                                <td> <span t-field="doc.inversor_3" /></td>
-                                <td> <span t-field="doc.inversor_4" /></td>
-                                <td> <span t-field="doc.inversor_5" /></td>
+
                             </tr>
                         </t>
                     </table>

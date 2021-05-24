@@ -8,7 +8,8 @@ class informe(models.Model):
     _description = "Informe"
 
     fecha = fields.Date()
-    instalacion = fields.Char() # nombre de la instalación
+    planta = fields.Charx()
+
     epR = fields.Float()
     emR = fields.Float()
     epS = fields.Float()
@@ -32,8 +33,6 @@ class informe(models.Model):
     
     inversor_1 = fields.Float(required=False)
     inversor_2 = fields.Float(required=False)
-    inversor_3 = fields.Float(required=False)
-    inversor_4 = fields.Float(required=False)
-    inversor_5 = fields.Float(required=False)
+
     propietario = fields.Many2one('res.users','Propietario', default=lambda self: self.env.uid) 
     # el propietario es el usuario que crea los datos

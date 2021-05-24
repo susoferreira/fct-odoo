@@ -5,30 +5,28 @@
             <field name="model">informes.informe</field>
             <field name="arch" type="xml">
                 <tree string="informes tree view" editable ="top">
-                    <field name ="propietario"/>
-                    <field name ="instalacion"/>
-                    <field name ="fecha"/>
-                    <field name ="epR"/>
-                    <field name ="emR"/>
-                    <field name ="epS"/>
-                    <field name ="emS"/>
-                    <field name ="epT"/>
-                    <field name ="emT"/>
-                    <field name ="epRST"/>
-                    <field name ="Q1"/>
-                    <field name ="Q2"/>
-                    <field name ="Q3"/>
-                    <field name ="Q4"/>
-                    <field name ="EcR"/>
-                    <field name ="EcS"/>
-                    <field name ="EcT"/>
-                    <field name ="EcRST"/>
-                    <field name ="Einv_tot"/>
-                    <field name ="inversor_1"/>
-                    <field name ="inversor_2"/>
-                    <field name ="inversor_3"/>
-                    <field name ="inversor_4"/>
-                    <field name ="inversor_5"/>
+                  <field name ="propietario"/>
+                  <field name ="planta"/>
+                  <field name ="fecha"/>
+                  <field name ="epR"/>
+                  <field name ="emR"/>
+                  <field name ="epS"/>
+                  <field name ="emS"/>
+                  <field name ="epT"/>
+                  <field name ="emT"/>
+                  <field name ="epRST"/>
+                  <field name ="Q1"/>
+                  <field name ="Q2"/>
+                  <field name ="Q3"/>
+                  <field name ="Q4"/>
+                  <field name ="EcR"/>
+                  <field name ="EcS"/>
+                  <field name ="EcT"/>
+                  <field name ="EcRST"/>
+                  <field name ="Einv_tot"/>
+                  <field name ="inversor_1"/>
+                  <field name ="inversor_2"/>
+
                 </tree>
             </field>
         </record>
