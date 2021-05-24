@@ -8,7 +8,7 @@ class informe(models.Model):
     _description = "Informe"
 
     fecha = fields.Date()
-    planta = fields.Charx()
+    planta = fields.Char()
 
     epR = fields.Float()
     emR = fields.Float()
