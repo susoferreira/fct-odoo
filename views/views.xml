@@ -30,6 +30,18 @@
                 </tree>
             </field>
         </record>
+
+        <record model="ir.ui.view" id="Informe_graph_view">
+        <field name="name">informe.tree</field>
+        <field name="model">informes.informe</field>
+        <field name="type">graph</field>
+        <field name="arch" type="xml">
+          <graph string="Informes">
+                    <field name ="planta"/>
+                    <field name ="fecha"/>
+          </graph>
+        </field>
+        </record>
     <!-- explicit list view definition -->
 <!--
     <record model="ir.ui.view" id="..list">
@@ -42,15 +54,6 @@
           <field name="value2"/>
         </tree>
       </field>
-    </record>
--->
-
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="..action_window">
-      <field name="name">. window</field>
-      <field name="res_model">...</field>
-      <field name="view_mode">tree,form</field>
     </record>
 -->
 
