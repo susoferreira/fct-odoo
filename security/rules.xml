@@ -1,17 +1,17 @@
 <odoo>
     <data>
-        <record model="ir.rule" id="informes_record_rule">
+        <record model="ir.rule" id="informes_record_rule_admin">
             <field name="name">informes propios </field>
-                <field name="model_id" ref="informes.model_informes_informe"/>
+            <field name="model_id" ref="informes.model_informes_informe"/>
             <field name="domain_force">[('propietario','=',user.id)]</field>
             <field name="groups" eval="[(4,ref('base.group_user'))]"/>
         </record>
-
-        <record model="ir.rule" id="informes_record_rule">
-            <field name="name">Administradores acceso a todos los campos </field>
+        <record model="ir.rule" id="informes_record_rule_usuarios">
+                <field name="name">Administradores acceso a todos los campos </field>
                 <field name="model_id" ref="informes.model_informes_informe"/>
-            <field name="domain_force"> [(1,'=',1)]</field>
-            <field name="groups" eval="[(4,ref('base.group_erp_manager'))]"/>
+                <field name="domain_force"> [(1,'=',1)]</field>
+                <field name="groups" eval="[(4,ref('base.group_erp_manager'))]"/>
         </record>
+        
     </data>
 </odoo>
