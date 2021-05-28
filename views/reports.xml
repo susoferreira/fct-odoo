@@ -2,10 +2,10 @@
     <template id="report_datos">
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
-                <!-- TODO, hacer que use el css correctamente-->
+
 
                 <div class="page">
-                    <h1 style="text-align: center;">Report title</h1>
+                    <h1 style="text-align: center;">Informe</h1>
                     <style>
                        
                        .flat-table {

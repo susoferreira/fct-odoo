@@ -4,8 +4,10 @@
             <field name="name">informe.tree</field>
             <field name="model">informes.informe</field>
             <field name="arch" type="xml">
-                <tree string="informes tree view" editable ="top">
+                <tree string="informes tree view" editable ="top" decoration-danger="estado=='error'">
                   <field name ="propietario"/>
+                  <field name ="restricciones"/>
+                  <field name ="estado"/>
                   <field name ="planta"/>
                   <field name ="fecha"/>
                   <field name ="epR"/>
@@ -37,11 +39,69 @@
         <field name="type">graph</field>
         <field name="arch" type="xml">
           <graph string="Informes">
-                    <field name ="planta"/>
-                    <field name ="fecha"/>
+            <field name ="fecha" interval="day"/>
           </graph>
         </field>
         </record>
+
+
+
+
+        <record model="ir.ui.view" id="restricciones_tree_view">
+          <field name="name">informe.tree</field>
+          <field name="model">informes.restricciones_datos</field>
+          <field name="arch" type="xml">
+              <tree string="restricciones tree view" editable ="top">
+                <field name="min_epR"/>
+                <field name="min_emR"/>
+                <field name="min_epS"/>
+                <field name="min_emS"/>
+                <field name="min_epT"/>
+                <field name="min_emT"/>
+                <field name="min_epRST"/>
+                <field name="min_emRST"/>
+                <field name="min_Q1"/>
+                <field name="min_Q2"/>
+                <field name="min_Q3"/>
+                <field name="min_Q4"/>
+                <field name="min_EcR"/>
+                <field name="min_EcS"/>
+                <field name="min_EcT"/>
+                <field name="min_EcRST"/>
+                <field name="min_Einv_tot"/>
+                <field name="min_inversor_1"/>
+                <field name="min_inversor_2"/>
+                <field name="max_emR"/>
+                <field name="max_epR"/>
+                <field name="max_epS"/>
+                <field name="max_emS"/>
+                <field name="max_epT"/>
+                <field name="max_emT"/>
+                <field name="max_epRST"/>
+                <field name="max_emRST"/>
+                <field name="max_Q1"/>
+                <field name="max_Q2"/>
+                <field name="max_Q3"/>
+                <field name="max_Q4"/>
+                <field name="max_EcR"/>
+                <field name="max_EcS"/>
+                <field name="max_EcT"/>
+                <field name="max_EcRST"/>
+                <field name="max_Einv_tot"/>
+                <field name="max_inversor_1"/>
+                <field name="max_inversor_2"/>
+
+              </tree>
+          </field>
+      </record>
+
+
+
+
+
+
+
+
     <!-- explicit list view definition -->
 <!--
     <record model="ir.ui.view" id="..list">

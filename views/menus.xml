@@ -5,6 +5,12 @@
     <field name="res_model">informes.informe</field>
     <field name="view_mode">tree,form,graph</field>
 </record>
+<record model="ir.actions.act_window" id="action_list_restricciones">  <!--acción para ver los registros -->
+    <field name="name">Restricciones</field>
+    <field name="res_model">informes.restricciones_datos</field>
+    <field name="view_mode">tree</field>
+</record>
 <!-- menu vinculado a esa acción-->
 <menuitem id="menu_informes" name="Informes" action="action_list_informes"/>
+<menuitem id="menu_restricciones" name="Ver Restricciones" parent="menu_informes" action="action_list_restricciones"/>
 </odoo>

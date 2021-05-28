@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 informes_informes,informes.informe,model_informes_informe,base.group_user,1,1,1,1
+informes_restricciones_datos,informes.restricciones_datos,model_informes_restricciones_datos,base.group_user,1,1,1,1
