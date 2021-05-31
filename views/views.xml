@@ -4,7 +4,7 @@
             <field name="name">informe.tree</field>
             <field name="model">informes.informe</field>
             <field name="arch" type="xml">
-                <tree string="informes tree view" editable ="top" decoration-danger="estado=='error'">
+                <tree string="informes tree view" editable ="top" decoration-danger="estado!='correcto'">
                   <field name ="propietario"/>
                   <field name ="restricciones"/>
                   <field name ="estado"/>

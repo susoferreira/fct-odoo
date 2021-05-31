@@ -39,6 +39,9 @@ class informe(models.Model):
     restricciones = fields.Many2one("informes.restricciones_datos") 
     estado = fields.Char(compute='comprobar_valores', store=False) #si se guarda en la base de datos reduce el rendimiento pero es necesario para usarlo en la graph view
 
+
+
+
     @api.depends("restricciones") #cuando cambien las restricciones se volverá a calcular el módulo
     def comprobar_valores(self):
         """
@@ -59,7 +62,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: epR"
                 continue
 
             if (
@@ -69,7 +72,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: emR"
                 continue
 
             if (
@@ -79,7 +82,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: epS"
                 continue
 
             if (
@@ -89,7 +92,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: emS"
                 continue
 
             if (
@@ -99,7 +102,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: epT"
                 continue
 
             if (
@@ -109,7 +112,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: emT"
                 continue
 
             if (
@@ -119,7 +122,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: epRST"
                 continue
 
             if (
@@ -129,7 +132,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: emRST"
                 continue
 
             if (
@@ -139,7 +142,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: Q1"
                 continue
 
             if (
@@ -149,7 +152,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: Q2"
                 continue
 
             if (
@@ -159,7 +162,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: Q3"
                 continue
 
             if (
@@ -169,7 +172,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: Q4"
                 continue
 
             if (
@@ -179,7 +182,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: EcR"
                 continue
 
             if (
@@ -189,7 +192,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: EcS"
                 continue
 
             if (
@@ -199,7 +202,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: EcT"
                 continue
 
             if (
@@ -209,7 +212,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: EcRST"
                 continue
 
             if (
@@ -219,7 +222,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: Einv_tot"
                 continue
 
             if (
@@ -229,7 +232,7 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: inversor_1"
                 continue
 
             if (
@@ -239,10 +242,14 @@ class informe(models.Model):
                 ):
                 record.estado = "correcto"
             else:
-                record.estado = "error"
+                record.estado = "error: inversor_2"
                 continue
 
 
+
+#usado para generar el codigo de validación
+#for i in [epR,emR,epS,emS,epT,emT,epRST,emRST,Q1,Q2,Q3,Q4,EcR,EcS,EcT,EcRST,Einv_tot,inversor_1,inversor_2]:
+#   print(s.format(i))
 """
 if (
         (record.restricciones.max_{0} == 0 and record.restricciones.min_{0} ==0 )
@@ -251,5 +258,5 @@ if (
     ):
     record.estado = "correcto"
 else:
-    record.estado = "error"
+    record.estado = "error: {0}"
     continue """
