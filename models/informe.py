@@ -37,9 +37,26 @@ class informe(models.Model):
     propietario = fields.Many2one('res.users','Propietario', default=lambda self: self.env.uid) 
     # el propietario es el usuario que crea los datos
     restricciones = fields.Many2one("informes.restricciones_datos") 
-    estado = fields.Char(compute='comprobar_valores', store=False) #si se guarda en la base de datos reduce el rendimiento pero es necesario para usarlo en la graph view
+    estado = fields.Char(compute='comprobar_valores', store=True) #si se guarda en la base de datos reduce el rendimiento pero es necesario para usarlo en la graph view
 
 
+
+
+
+    @api.model
+    def AvisarDatos(self):
+
+        for record in self.search([("estado","!=","correcto")]):
+            #enviar email
+            template=0
+            domain=[('id','=','6')]
+            tplate = self.env['mail.template'].search(domain, limit = 1)
+            for temp in tplate:
+                template = temp
+            if template:
+                print ('Sending e-mail using template "',temp.name,'" ..... ')
+                template.send_mail(record.id,force_send = True) # hay que pasar la id del record
+                print ('.... mail sent.')
 
 
     @api.depends("restricciones") #cuando cambien las restricciones se volverá a calcular el módulo

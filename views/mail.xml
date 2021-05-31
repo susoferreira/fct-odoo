@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="email_template_aviso_datos" model="mail.template">
+            <field name="name">Email aviso datos</field>
+            <field name="model_id" ref="informes.model_informes_informe"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="email_from">odoo@oodo.com</field>
+            <field name="email_to">${object.propietario.email}</field>
+            <field name="subject">Algunos datos se pasan de los valores establecidos</field>
+            <field name="body_html"><![CDATA[
+         
+             
+         
+            <h1>${object.estado} fecha:${object.fecha} planta: ${object.planta}</h1>
+             
+            
+            ]]></field>
+        </record>
+    </data>
+</odoo>
